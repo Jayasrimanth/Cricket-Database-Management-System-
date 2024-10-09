@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Player</title>
+    <style>
+        body {
+          background-color: black;
+          color: white;
+          text-align:center;
+          font-size:larger;
+        }
+        /* Center the title */
+        .title {
+          text-align: center;
+          margin-top: 20px;
+        }
+  
+        /* Style the navigation bar */
+        .navbar {
+          background-color: black;
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+          margin-bottom: 40px;
+        }
+  
+        .navbar button {
+          background-color: #333;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          cursor: pointer;
+          text-decoration: none;
+          margin-left: 40px;
+          border-radius: 5px;
+        }
+  
+        .navbar button:hover {
+          background-color: #444;
+          /* transform: translateY(-5px); */
+          font-size: 20px;
+        }
+  
+        /* Style the main content */
+        .main-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 20px;
+          /* margin-top: 30px; */
+        }
+  
+        .text-block {
+          /* background-color: #f7f7f7; */
+          padding: 20px;
+          font-size: 24px;
+          /* border: 1px solid #ddd; */
+          margin-top: 90px;
+        }
+  
+        .picture-block {
+          width: 50%;
+          margin: 20px auto;
+        }
+  
+        .picture-block img {
+          width: 600px;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+
+        label {
+            margin-right: 10px;
+            text-align: right;
+            width: 100px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="time"] {
+            flex-grow: 1;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #444;
+        }
+        .navbar a {
+          text-decoration: none;
+          color: #ddd;
+        }
+        a{
+            text-decoration:none;
+            color:blue;
+            background-color:grey;
+        }
+        
+      </style>
+</head>
+<body>
+    <h1>Update Player</h1>
+    <form method="post">
+        <label for="team_id">Team ID:</label>
+        <input type="text" id="team_id" name="team_id" value="{{ player.team_id }}"><br>
+
+        <label for="no_of_worldcups">No. of World Cups:</label>
+        <input type="text" id="no_of_worldcups" name="no_of_worldcups" value="{{ player.no_of_worldcups }}"><br>
+
+        <label for="number_of_matches">Number of Matches:</label>
+        <input type="text" id="number_of_matches" name="number_of_matches" value="{{ player.number_of_matches }}"><br>
+
+        <label for="batting_average">Batting Average:</label>
+        <input type="text" id="batting_average" name="batting_average" value="{{ player.batting_average }}"><br>
+
+        <label for="no_of_sixes">No. of Sixes:</label>
+        <input type="text" id="no_of_sixes" name="no_of_sixes" value="{{ player.no_of_sixes }}"><br>
+
+        <label for="no_of_fours">No. of Fours:</label>
+        <input type="text" id="no_of_fours" name="no_of_fours" value="{{ player.no_of_fours }}"><br>
+
+        <label for="no_of_totalruns">No. of Total Runs:</label>
+        <input type="text" id="no_of_totalruns" name="no_of_totalruns" value="{{ player.no_of_totalruns }}"><br>
+
+        <label for="no_of_t20">No. of T20 Matches:</label>
+        <input type="text" id="no_of_t20" name="no_of_t20" value="{{ player.no_of_t20 }}"><br>
+
+        <label for="no_of_odi">No. of ODI Matches:</label>
+        <input type="text" id="no_of_odi" name="no_of_odi" value="{{ player.no_of_odi }}"><br>
+
+        <label for="no_of_test">No. of Test Matches:</label>
+        <input type="text" id="no_of_test" name="no_of_test" value="{{ player.no_of_test }}"><br>
+
+        <label for="no_of_wickets">No. of Wickets:</label>
+        <input type="text" id="no_of_wickets" name="no_of_wickets" value="{{ player.no_of_wickets }}"><br>
+
+        <label for="type_of_bowler">Type of Bowler:</label>
+        <input type="text" id="type_of_bowler" name="type_of_bowler" value="{{ player.type_of_bowler }}"><br>
+
+        <label for="economy">Economy:</label>
+        <input type="text" id="economy" name="economy" value="{{ player.economy }}"><br>
+
+        <input type="submit" value="Update">
+    </form>
+    <br>
+    <a href="/players">Back to Players</a>
+</body>
+</html>

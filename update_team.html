@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Team</title>
+    <style>
+        body {
+          background-color: black;
+          color: white;
+          text-align:center;
+          font-size:larger;
+        }
+        /* Center the title */
+        .title {
+          text-align: center;
+          margin-top: 20px;
+        }
+  
+        /* Style the navigation bar */
+        .navbar {
+          background-color: black;
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+          margin-bottom: 40px;
+        }
+  
+        .navbar button {
+          background-color: #333;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          cursor: pointer;
+          text-decoration: none;
+          margin-left: 40px;
+          border-radius: 5px;
+        }
+  
+        .navbar button:hover {
+          background-color: #444;
+          /* transform: translateY(-5px); */
+          font-size: 20px;
+        }
+  
+        /* Style the main content */
+        .main-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 20px;
+          /* margin-top: 30px; */
+        }
+  
+        .text-block {
+          /* background-color: #f7f7f7; */
+          padding: 20px;
+          font-size: 24px;
+          /* border: 1px solid #ddd; */
+          margin-top: 90px;
+        }
+  
+        .picture-block {
+          width: 50%;
+          margin: 20px auto;
+        }
+  
+        .picture-block img {
+          width: 600px;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+        .navbar a {
+          text-decoration: none;
+          color: #ddd;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+
+        label {
+            margin-right: 10px;
+            text-align: right;
+            width: 100px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="time"] {
+            flex-grow: 1;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #444;
+        }
+        a{
+            text-decoration:none;
+            color:blue;
+            background-color:grey;
+        }
+
+      </style>
+</head>
+<body>
+    <h1>Update Team</h1>
+    <form method="post">
+        <label for="team_rank">Team Rank:</label>
+        <input type="text" id="team_rank" name="team_rank" value="{{ team.team_rank }}"><br>
+
+        <label for="team_name">Team Name:</label>
+        <input type="text" id="team_name" name="team_name" value="{{ team.team_name }}"><br>
+
+        <label for="country_name">Country Name:</label>
+        <input type="text" id="country_name" name="country_name" value="{{ team.country_name }}"><br>
+
+        <label for="no_of_wins">No. of Wins:</label>
+        <input type="text" id="no_of_wins" name="no_of_wins" value="{{ team.no_of_wins }}"><br>
+
+        <label for="no_of_loses">No. of Loses:</label>
+        <input type="text" id="no_of_loses" name="no_of_loses" value="{{ team.no_of_loses }}"><br>
+
+        <label for="no_of_draws">No. of Draws:</label>
+        <input type="text" id="no_of_draws" name="no_of_draws" value="{{ team.no_of_draws }}"><br>
+
+        <label for="no_of_bowlers">No. of Bowlers:</label>
+        <input type="text" id="no_of_bowlers" name="no_of_bowlers" value="{{ team.no_of_bowlers }}"><br>
+
+        <label for="no_of_batsmans">No. of Batsmen:</label>
+        <input type="text" id="no_of_batsmans" name="no_of_batsmans" value="{{ team.no_of_batsmans }}"><br>
+
+        <input type="submit" value="Update">
+    </form>
+    <br>
+    <a href="/teams">Back to Teams</a>
+</body>
+</html>

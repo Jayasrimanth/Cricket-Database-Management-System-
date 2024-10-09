@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Umpire</title>
+    <style>
+        body {
+          background-color: black;
+          color: white;
+          text-align:center;
+          font-size:larger;
+        }
+        /* Center the title */
+        .title {
+          text-align: center;
+          margin-top: 20px;
+        }
+  
+        /* Style the navigation bar */
+        .navbar {
+          background-color: black;
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+          margin-bottom: 40px;
+        }
+  
+        .navbar button {
+          background-color: #333;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          cursor: pointer;
+          text-decoration: none;
+          margin-left: 40px;
+          border-radius: 5px;
+        }
+  
+        .navbar button:hover {
+          background-color: #444;
+          /* transform: translateY(-5px); */
+          font-size: 20px;
+        }
+  
+        /* Style the main content */
+        .main-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 20px;
+          /* margin-top: 30px; */
+        }
+  
+        .text-block {
+          /* background-color: #f7f7f7; */
+          padding: 20px;
+          font-size: 24px;
+          /* border: 1px solid #ddd; */
+          margin-top: 90px;
+        }
+  
+        .picture-block {
+          width: 50%;
+          margin: 20px auto;
+        }
+  
+        .picture-block img {
+          width: 600px;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+        .navbar a {
+          text-decoration: none;
+          color: #ddd;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+
+        label {
+            margin-right: 10px;
+            text-align: right;
+            width: 100px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="time"] {
+            flex-grow: 1;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #444;
+        }
+        a{
+            text-decoration:none;
+            color:blue;
+            background-color:grey;
+        }
+        
+      </style>
+</head>
+<body>
+    <h1>Update Umpire</h1>
+    <form method="post">
+        <label for="umpire_name">Name:</label>
+        <input type="text" id="umpire_name" name="umpire_name" value="{{ umpire.umpire_name }}"><br>
+
+        <label for="no_of_matches">No. of Matches:</label>
+        <input type="text" id="no_of_matches" name="no_of_matches" value="{{ umpire.no_of_matches }}"><br>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" value="{{ umpire.country }}"><br>
+
+        <input type="submit" value="Update">
+    </form>
+    <br>
+    <a href="/umpires">Back to Umpires</a>
+</body>
+</html>

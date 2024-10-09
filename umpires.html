@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Umpires</title>
+    <style>
+        body {
+          background-color: black;
+          color: white;
+          text-align:center;
+          font-size:larger;
+        }
+        /* Center the title */
+        .title {
+          text-align: center;
+          margin-top: 20px;
+        }
+  
+        /* Style the navigation bar */
+        .navbar {
+          background-color: black;
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+          margin-bottom: 40px;
+        }
+  
+        .navbar button {
+          background-color: #333;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          cursor: pointer;
+          text-decoration: none;
+          margin-left: 40px;
+          border-radius: 5px;
+        }
+  
+        .navbar button:hover {
+          background-color: #444;
+          /* transform: translateY(-5px); */
+          font-size: 20px;
+        }
+  
+        /* Style the main content */
+        .main-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 20px;
+          /* margin-top: 30px; */
+        }
+  
+        .text-block {
+          /* background-color: #f7f7f7; */
+          padding: 20px;
+          font-size: 24px;
+          /* border: 1px solid #ddd; */
+          margin-top: 90px;
+        }
+  
+        .picture-block {
+          width: 50%;
+          margin: 20px auto;
+        }
+  
+        .picture-block img {
+          width: 600px;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+        .navbar a {
+          text-decoration: none;
+          color: #ddd;
+        }
+        a{
+            text-decoration:none;
+            color:blue;
+            background-color:grey;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid white;
+        }
+
+        th {
+            background-color: #333;
+        }
+
+        td {
+            background-color: #555;
+        }
+      </style>
+</head>
+<body>
+    <h1>Umpires</h1>
+    <table border="1">
+        <tr>
+            <th>Umpire ID</th>
+            <th>Name</th>
+            <th>No. of Matches</th>
+            <th>Country</th>
+            <th>Actions</th>
+        </tr>
+        {% for umpire in umpires %}
+        <tr>
+            <td>{{ umpire.umpire_id }}</td>
+            <td>{{ umpire.umpire_name }}</td>
+            <td>{{ umpire.no_of_matches }}</td>
+            <td>{{ umpire.country }}</td>
+            <td>
+                <a href="/update_umpire/{{ umpire.umpire_id }}">Update</a>
+                <a href="/delete_umpire/{{ umpire.umpire_id }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>
